@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&display=swap');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-repeat: repeat;
+    color: white;
+    background-size: cover;
+    background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    height: 100%;
+}
+
+.hide {
+    display: none !important;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scores {
+    display: flex;
+    margin-top: 50px;
+    border: 2px solid #5C6C86;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.scores img {
+    width: 150px;
+}
+
+.score {
+    background-color: #FCFCFC;
+    width: 8rem;
+    border-radius: 10px;
+    color: #57556A;
+    text-align: center;
+    height: 100%;
+}
+
+.score h4 {
+    text-transform: uppercase;
+    color: #585a6e;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.score h2 {
+    font-size: 60px;
+    margin: 0px;
+    margin-top: -8px;
+}
+
+.rps-icons {
+    margin-top: 60px;
+    position: relative;
+    text-align: center;
+}
+
+#trio {
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.rps-container {
+    width: 390px;
+    height: 360px;
+}
+
+.rps {
+    background-color: #FCFCFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    display: inline-flex;
+    border: double 20px transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 80px;
+    cursor: pointer;
+}
+
+.rps-container div {
+    position: absolute;
+
+}
+
+.rock {
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(white, white), radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.paper {
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(white, white), radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+
+}
+
+.scissors {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: linear-gradient(white, white), radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.translate {
+    transform: translateX(-50%);
+}
+
+.rock:hover {
+    background-image: linear-gradient(white, rgb(230, 230, 230)), radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+
+}
+
+.scissors:hover {
+    background-image: linear-gradient(white, rgb(204, 201, 201)), radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.paper:hover {
+    background-image: linear-gradient(white, rgb(216, 216, 216)), radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+
+}
+
+.yours {
+    width: 245px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.the-house {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.black {
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    background-color: #16213D;
+}
+
+/* after picking */
+.pick {
+    margin-top: 50px;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.pick h3 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+
+
+.pickedIcon {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.winlose {
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .2s all;
+    opacity: 0;
+}
+
+.winlosetext {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.againplayBtn {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: .1s;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.againplayBtn:hover {
+    background-color: #cbcfd1;
+    color: rgb(0, 0, 0);
+}
+
+.rules {
+    position: absolute;
+    right: 8%;
+    bottom: 5%;
+    outline: none;
+    border: 1px solid #5C6C86;
+    color: hsl(229, 25%, 31%);
+    padding: 5px 20px;
+    font-size: 15px;
+    letter-spacing: 3px;
+    transition: .1s;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+.rules:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.rulesimgsec {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    z-index: 6;
+    transform: translate(-50%, -50%);
+
+}
+
+.fularea {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 5;
+}
+
+.close {
+    color: rgb(22, 22, 22);
+    font-size: 20px;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .1s;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.close:hover {
+    background-color: #e9e9e9;
+}
+
+/* media queries */
+
+@media(max-width:820px) {
+    .scores {
+        width: 60%;
+    }
+
+    .winlose {
+        bottom: -100px !important;
+        transform: translateX(-50%);
+    }
+
+    .winlosetext {
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    .againplayBtn {
+
+        padding: 10px 30px;
+
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width:525px) {
+    .scores img {
+        width: 120px;
+    }
+
+    .score {
+        background-color: #FCFCFC;
+        width: 7rem;
+        border-radius: 10px;
+        color: #57556A;
+        text-align: center;
+        height: 100%;
+    }
+
+    .score h4 {
+        font-size: 15px;
+
+    }
+
+    .score h2 {
+        font-size: 50px;
+
+    }
+}
+
+@media(max-width:500px) {
+    .scores {
+        width: 80%;
+    }
+
+    .rps-container {
+        width: 350px;
+        height: 310px;
+    }
+
+    .rps {
+        width: 100px;
+        height: 100px;
+        border-radius: 120px;
+        border: double 15px transparent;
+    }
+
+    #trio {
+        width: 220px;
+    }
+
+    .the-house h3,
+    .yours h3 {
+        height: 58px;
+        font-size: 25px;
+    }
+}
+
+@media(min-height:720px) and (max-width:820px) {
+
+    .rules {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 5%
+    }
+
+}
